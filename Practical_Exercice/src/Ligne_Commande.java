@@ -37,7 +37,7 @@ public class Ligne_Commande {
 	}
 	public void setQuantite_commande(int quantite_commande) {
 		this.quantite_commande = quantite_commande;
-	}
+	} //
 	public Date getDate_commande() {
 		return date_commande;
 	}

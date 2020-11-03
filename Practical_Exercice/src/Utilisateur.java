@@ -19,7 +19,7 @@ public class Utilisateur extends Personne {
 	}
 	void modifierLigne(int id ,int quantite ,Produit p ,Date d,Commande c) {
 		c.modifier_ligne(id, quantite, p, d);
-	}
+	} //
 	
 	void supprimerLigne(Ligne_Commande l) {
 		l.c.supprimer_ligne(l);

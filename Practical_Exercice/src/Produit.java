@@ -18,7 +18,7 @@ public class Produit {
 
 	public double getPrix() {
 		return prix_unitaire;
-	}
+	} //
 
 	public void setPrix(double prix) {
 		this.prix_unitaire = prix;

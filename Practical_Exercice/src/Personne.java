@@ -19,7 +19,7 @@ public class Personne {
 
 	public void setId(int id) {
 		this.id = id;
-	}
+	} //
 
 	public String getNom() {
 		return nom;

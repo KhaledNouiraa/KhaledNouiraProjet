@@ -8,7 +8,7 @@ public class Administrateur extends Personne {
 	Administrateur(String nom, String prenom, int id) {
 		super(nom, prenom, id);
 		
-	}
+	} //
 		void ajouterUser (Utilisateur user ) {
 	tabUser.addElement(user);
 	

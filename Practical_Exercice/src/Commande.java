@@ -28,7 +28,7 @@ public class Commande {
 		
 	}
 	
-}
+}//
 	void supprimer_ligne(Ligne_Commande l) {
 		tabCommande.removeElement(l);
 		compteur_ligne-=1;

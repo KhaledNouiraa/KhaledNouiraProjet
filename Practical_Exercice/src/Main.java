@@ -57,7 +57,7 @@ public class Main {
 				
 				admin.ajouterProduit( new Produit(id_Produit,prix_Produit,titre_produit, categorie_produit, new Date()));
 				
-				}
+				} //
 				else if (menu_1==3) {
 					System.out.println("Deconnecté");
 					System.exit(0);
