@@ -58,7 +58,7 @@ public class Produit {
 	}
  public String toString () {
 	 return "le titre :"+getTitle()+" ID : "+getId_Produit()+" Categorie: "+getCategorie()+
-			 " Prix : "+ getPrix()+" Date : "+getDate_Produit()+"\n";
+			 " Prix : "+ getPrix()+" Date : "+getDate_Produit();
  }
 	
 	void afficherProduit() {

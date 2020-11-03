@@ -2,8 +2,8 @@ import java.util.Date;
 import java.util.Vector;
 
 public class Administrateur extends Personne {
-	static Vector<Utilisateur> tabUser = new Vector<Utilisateur>(); ;
-	static Vector<Produit> tabProduit = new Vector<Produit>(); ;
+	static Vector<Utilisateur> tabUser = new Vector<Utilisateur>(); 
+	static Vector<Produit> tabProduit = new Vector<Produit>(); 
 	
 	Administrateur(String nom, String prenom, int id) {
 		super(nom, prenom, id);

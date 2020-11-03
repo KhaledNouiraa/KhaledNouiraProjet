@@ -6,6 +6,7 @@ public class Main {
 	public static void main(String[] args) {
 		int nb_Session=0; // le nbr des Session 
 		int nb_Session_produit =0; // le nbr de Session pour creer les produit
+		 int nb_Session_Ligne =0; //le nbr de Session pour creer les ligne de Commande
 		Scanner user =new Scanner(System.in);
 		System.out.println("Donner l' ID de l'Administrateur");
 		int id_A= user.nextInt();
@@ -18,8 +19,6 @@ public class Main {
 		admin.afficherAdmin();
 		System.out.println("la creation est effectuée \n");
 
-		
-			System.out.println(" Session Administrateur Sesion ");
 			System.out.println("Creer un Utilisateur");
 			System.out.println("Donner le nom de  Utilisateur");
 			String nomC=user.next();
@@ -27,7 +26,8 @@ public class Main {
 			String prenomC =user.next();
 			System.out.println("Donner l' ID de  Utilisateur");
 			int id_C= user.nextInt();
-			Utilisateur client =new Utilisateur(nomC, prenomC, id_C);
+			Utilisateur client =new Utilisateur(nomC, prenomC, id_C); // on va utiliser un seul Client
+			Commande c= new Commande(1); // une seul Commande pour un utilisateur
 			client.afficherUtilisateur();
 			System.out.println("la creation est effectuée \n");
 			admin.ajouterUser(client);
@@ -78,35 +78,41 @@ public class Main {
 			int id_user=user.nextInt();
 			for(int i=0 ;i<admin.tabUser.size();i++) {
 				if(Administrateur.tabUser.elementAt(i).getId()==id_user) {
-					
-				
+					 
+				while(nb_Session_Ligne <2) {
+					System.out.println("2:Ajouter Ligne || 3: Deconnecté");
+					int menu_2= user.nextInt();	
+				if(menu_2==2) {
 					System.out.println("Choisir le Produit par ID");
 					int id_produit= user.nextInt();
 					System.out.println("Choisir la Quantite");
 					int qtq= user.nextInt();
-					System.out.println("Cree Commande =>Donner ID");
-					int id_Commande= user.nextInt();
-					Commande c=new Commande(id_Commande);
 					
 					for(int j=0 ;j<admin.tabProduit.size();j++) {
 						
 					if(admin.tabProduit.elementAt(j).getId_Produit()==id_produit) {
-						Ligne_Commande l=new Ligne_Commande(admin.tabProduit.elementAt(j), c, 1, qtq, new Date());// un seul Ligne de Comande 
-						l.calculate_Commande();
-						admin.tabUser.elementAt(i).ajouterLigne(l);
+					 
+						admin.tabUser.elementAt(i).ajouterLigne(new Ligne_Commande(admin.tabProduit.elementAt(j),c, 1, qtq, new Date()));
 						admin.tabUser.elementAt(i).ajouterCommande(c);
 						System.out.println("la liste de Commande pour un seul Utilisatur "+Administrateur.tabUser.elementAt(i));
 						admin.tabUser.elementAt(i).consulterCommandes();
 					}
 					}
-					
+				}
+				else if(menu_2==3) {
+					System.out.println("Deconnecté");
+					System.exit(0);
+				}
+				nb_Session_Ligne++; }
 					
 					
 				}
 		
 		}
 			
-		}}
+	
+		}
+		}
 	
 	
 	

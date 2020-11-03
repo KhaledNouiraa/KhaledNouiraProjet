@@ -38,7 +38,7 @@ public class Commande {
 		double sum = 0;
 		for(int i=0 ;i<tabCommande.size();i++) {
 		
-		sum+=tabCommande.elementAt(i).calculate_Commande();
+		sum=tabCommande.elementAt(i).calculate_Commande()+sum;
 		
 	}return sum;}
 	
@@ -61,8 +61,11 @@ public class Commande {
 	}
 	void AfficherCommande() {
 		for(int i = 0;i<tabCommande.size();i++) {
-			System.out.println("la Commande N "+i);
+			System.out.println("la Ligne de Commande N "+i);
 			tabCommande.elementAt(i).afficherLigne();
-			afficherTotal();
+			System.out.println("\n");
 		}
-}}
+			afficherTotal();
+			
+		}
+}
