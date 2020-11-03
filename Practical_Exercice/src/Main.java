@@ -37,7 +37,7 @@ public class Main {
 			
 			System.out.println("la creation est effectuée \n");
 			System.out.println("Deconnecté");
-			while(nb_Session<1) {// 2 Session 1ere pour un Adminstrateur et 2eme  pour un Utilisateur 
+			while(nb_Session<2) {// 2 Session 1ere pour un Adminstrateur et 2eme  pour un Utilisateur 
 		System.out.println("Connecter en tantque Administrateur -1- || Utilisateur -0-");	  
 		int choix=user.nextInt(); // il faut Connecter au Session Administrateur pour creer les produits (Choix 1 au 1er Session)
 		if(choix ==1) { 
@@ -112,6 +112,7 @@ public class Main {
 			
 	
 		}
+		nb_Session++;
 		}
 	
 	

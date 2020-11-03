@@ -57,7 +57,7 @@ public class Commande {
 		this.tabCommande = tabCommande;
 	}
 	void afficherTotal() {
-		System.out.println("Le total :"+calculate_TotalPrices());
+		System.out.println("Le total Generale :"+calculate_TotalPrices());
 	}
 	void AfficherCommande() {
 		for(int i = 0;i<tabCommande.size();i++) {

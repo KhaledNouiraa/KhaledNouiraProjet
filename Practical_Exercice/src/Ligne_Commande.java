@@ -50,6 +50,7 @@ public class Ligne_Commande {
 	void afficherLigne() {
 		p.afficherProduit();
 		System.out.println("la Quantite : "+getQuantite_commande());
+		System.out.println("le total : "+calculate_Commande());
 	}
 	
 
