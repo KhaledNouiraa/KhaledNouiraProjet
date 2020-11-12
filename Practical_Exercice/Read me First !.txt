@@ -1,0 +1,46 @@
+
+--- Pour Tester ce Projet --
+
+1- Installer un environnement intégré de développement (IDE) 
+    Eclipse IDE 
+2- Un Serveur Local : Wamp ou Xampp  pour Acceder au DataBase 
+via phpMyAdmin 
+
+---Etapes à suivre pour lancer le projet--
+
+1- Importer base de données SQL dans le système de gestion de base de 
+données MySQL (phpMyAdmin) 
+Remarque : Notre base est situé dans un Dossier nomé "DataBase"
+2- Importer le Projet dans Eclipse IDE 
+
+---Etapes à suivre pour tester la classe Main ---
+
+    -- Session  Administrateur--
+
+	Le Menu : pas de soucis ici au niveau de scénario dans La Session Administrateur
+      
+       1-- Creer User
+       2-- Creer Livre
+       3--Display Livre
+       4--Modifier Livre
+       5--Supprimer Livre
+       6--Modifier User
+       7--Supprimer User
+       8-- Display Users
+
+   -- Session Utilisateur --
+    
+             On doit suivre Un scénario spécefique pour avoir une bonne resultat 
+	donc les etapes sont les suivants :
+	
+	1- Avant d' ajouter un ligne dans une commande on doit Consulter la liste de Livre
+	2- Ajouter un ligne ou des lignes 
+         	3-Display lignes 
+	4- si vous voulez modifier la quantite d'un ligne avant de passer une Commande
+	5-si vous Voulez supprimer une ligne avant de passer une Commande 
+	6-Passer une Commande 
+	7-si vous voulez Consulter les commandes passées
+
+** Remarques Importantes : 
+   - si la commande est passée on ne peut pas modifier ou supprimer  auccun ligne
+   -username et password sont des attributs ajoutées pour etre utiliser dans la partie     prochaine de notre projet

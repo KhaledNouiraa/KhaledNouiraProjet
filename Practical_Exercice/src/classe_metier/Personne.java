@@ -1,25 +1,20 @@
+package classe_metier;
 
 public class Personne {
-	private int id ;
+
 	private String nom;
 	private String prenom ;
 	 
 
 
-	Personne (String nom,String prenom , int id ){
+	Personne (String nom,String prenom  ){
 		
-		this.id=id;
+	
 		this.nom=nom;
 		this.prenom=prenom;
 	}
 	
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	} //
+//
 
 	public String getNom() {
 		return nom;
@@ -38,7 +33,7 @@ public class Personne {
 	}
 	
 	public String toString() {
-		return "le nom : "+getNom()+" , le prenom : "+getPrenom()+" ,ID : "+id +"\n";
+		return "le nom : "+getNom()+" , le prenom : "+getPrenom()+" ";
 	}
 	void afficherPersonne() {
 		System.out.println(toString());
