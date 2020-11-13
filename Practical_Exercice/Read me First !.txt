@@ -27,6 +27,7 @@ Remarque : Notre base est situé dans un Dossier nomé "DataBase"
        6--Modifier User
        7--Supprimer User
        8-- Display Users
+       9--Deconnexion
 
    -- Session Utilisateur --
     
@@ -40,7 +41,11 @@ Remarque : Notre base est situé dans un Dossier nomé "DataBase"
 	5-si vous Voulez supprimer une ligne avant de passer une Commande 
 	6-Passer une Commande 
 	7-si vous voulez Consulter les commandes passées
+	8-Deconnexion
 
 ** Remarques Importantes : 
+   - il faut avoir au moin une seul ligne dans le table Orders de notre Base
    - si la commande est passée on ne peut pas modifier ou supprimer  auccun ligne
-   -username et password sont des attributs ajoutées pour etre utiliser dans la partie     prochaine de notre projet
+   - Pour passer une Autre Commande il faux fermer la Session User et  Reouvrir une autre      Session User
+   -username et password sont des attributs ajoutées pour etre utiliser dans la partie         prochaine de notre projet (partie Avancée)
+   - le Classe Administrateur est ajouté pour etre utiliser dans la partie prochaine de notre projet (partie Avancée)

@@ -18,7 +18,7 @@ public class Administrateur extends Personne {
 
 	public void ajouterUser (Utilisateur user ) throws ClassNotFoundException, SQLException {
 		
-        int a=Connexion.executerRequeteMiseAJour("insert into user(first_name,last_name ,username ,password) values('"+user.getNom()+"','"+user.getPrenom()+"','"+user.getPassword()+"','"+user.getUsername()+"')");
+        int a=Connexion.executerRequeteMiseAJour("insert into user(first_name,last_name ,username ,password) values('"+user.getNom()+"','"+user.getPrenom()+"','"+user.getUsername()+"','"+user.getPassword()+"')");
         if(a!=0)
      	   System.out.println("Ajout Effectue !");
         else 

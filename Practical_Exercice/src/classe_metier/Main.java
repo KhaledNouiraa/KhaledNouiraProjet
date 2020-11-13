@@ -11,33 +11,38 @@ public class Main {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 	// y compris les lignes de order
-	
+		Scanner S = new Scanner(System.in);
 		Connexion conn =new Connexion();
 		System.out.println("Creer Un Admninistrateur");
 		Long time = System.currentTimeMillis();
 		Date d =  new Date(time);
 		Administrateur a = new Administrateur("khaled", "Nouira");
 		Utilisateur user_ = new Utilisateur("Etudiant", "Polytech", "****", "polyUser");
+		int Choix_fermer_Session=0;
+		while(Choix_fermer_Session!=1){
+			System.out.println("Choisir : Fermer :1 ou Reprendre : 2 ");
+			Choix_fermer_Session= S.nextInt(); 
 		int try_Session_admin =0;
-		Commande c = new Commande(5,d, user_.GetId());
-		Scanner S = new Scanner(System.in);
+		int id_commande= Commande.GetLastID() +1 ;
+		Commande c = new Commande(id_commande,d, user_.GetId());
+
 		
 		a.afficherAdmin();
-		
-		while(try_Session_admin<8) { // try_Session_admin est le nb pour tester tous le Menu Admin
+		int choix =0;
+		while(choix!=9) { // try_Session_admin est le nb pour tester tous le Menu Admin
 			
-		System.out.println("*** Menu Administrateur *** \n");
+		System.out.println("*** Menu Administrateur *** ");
 		System.out.print("1. Creer User        ");
 		System.out.println("2. Creer Livre ");
 		System.out.print("3. Display Livres    ");
 		System.out.println("4. Modifier Livre   ");
-		System.out.print("5. Supprimer  Livre  ");
+		System.out.print("5. Supprimer  Livre  ");//
 		System.out.println("6. Modifier User ");
 		System.out.print("7. Supprimer User    "); 
-		System.out.println("8. Display Users \n");
-		
-		System.out.print("Taper votre choix:");
-		int choix = S.nextInt();
+		System.out.println("8. Display Users ");
+		System.out.print("9. Deconnexion Admin   ");
+		System.out.println("Taper votre choix:");
+	 choix =S.nextInt();
 		
 		
 		switch (choix) {
@@ -111,11 +116,13 @@ public class Main {
 			   System.out.println("Display Utilisateurs");
 			    a.ConsulterUtilisateurs();
 			    break;
+		  case 9 :
+			  System.out.println("Deconnecte !");
 			  
 			}
 		}
-		int try_session =0; // try_Session est le nb pour tester tous le Menu User
-		while( try_session<8) { 
+		int choix_user =0; // try_Session est le nb pour tester tous le Menu User
+		while(choix_user !=9) { 
 			System.out.println("*** Menu Utilisateur ***");
 			System.out.print("1. Display Livres              ");
 			System.out.println("2 .Ajouter ligne"); // Ajouter un ligne au Commande Courante
@@ -125,8 +132,9 @@ public class Main {
 			System.out.println("6. Supprimer Commande ");
 			System.out.print("7. Passer Commande              "); 
 			System.out.println("8. Supprimer Ligne "); //Supprimer le ligne d'une Commande Courante
-		System.out.print("Taper votre choix:");
-		int choix_user = S.nextInt();
+			System.out.print("9. Deconnecter Utilisateur      ");
+			System.out.print("Taper votre choix:");
+		 choix_user= S.nextInt();
 		
 	 switch (choix_user) {
 	case 1 :
@@ -177,9 +185,11 @@ public class Main {
 		int id_line_DEl = S.nextInt();
 		c.supprimer_ligne(id_line_DEl);
 		break ;
+	case 9 :
+		System.out.println("Deconnexion USer");
 	}
-	 try_session ++;
+	
 		}
 	}
-
+	}
 }

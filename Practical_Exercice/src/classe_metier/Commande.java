@@ -103,6 +103,15 @@ public class Commande {
     else 
  	   System.out.println("echec !");
 	}
+	static int GetLastID() throws SQLException {
+		int id=0;
+		ResultSet rs =Connexion.executerRequeteConsultation("SELECT * FROM orders ORDER BY id_orders DESC LIMIT 0, 1");
+		while(rs.next()) {
+			id = rs.getInt(1);
+		
+	}return id;}
+		
+	
 	
 	double calculate_TotalPrices() throws ClassNotFoundException, SQLException {
 		double prix=0;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2020 at 07:49 PM
+-- Generation Time: Nov 13, 2020 at 10:47 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.31
 
@@ -55,7 +55,7 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`id_book`, `title_book`, `author_book`, `price_book`, `releaseDate_book`, `quantity`) VALUES
-(5, 'JAVA', 'Malek BEN SALEM', 26.3, '2020-11-13', 100072);
+(5, 'JAVA', 'Malek BEN SALEM', 26.3, '2020-11-13', 99992);
 
 -- --------------------------------------------------------
 
@@ -69,6 +69,14 @@ CREATE TABLE `orders` (
   `date_orders` date NOT NULL,
   `total_orders` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id_orders`, `id_user`, `date_orders`, `total_orders`) VALUES
+(1, 0, '2020-11-13', 0),
+(3, 6, '2020-11-13', 263);
 
 -- --------------------------------------------------------
 
@@ -103,7 +111,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `first_name`, `last_name`, `username`, `password`) VALUES
-(6, 'Etudiant', 'Polytech', '****', 'polyUser');
+(6, 'Etudiant', 'Polytech', 'polyUser', '****');
 
 --
 -- Indexes for dumped tables
@@ -153,13 +161,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `book`
 --
 ALTER TABLE `book`
-  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_book` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `order_lines`
 --
 ALTER TABLE `order_lines`
-  MODIFY `id_line` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_line` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `user`
